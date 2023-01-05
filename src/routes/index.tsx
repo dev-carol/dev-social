@@ -1,22 +1,32 @@
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 import LoginPage from "../pages/Login/LoginPage";
+import NotFoundPage from '../pages/NotFound/NotFoundPage';
 
 
-const router = createBrowserRouter([
+const unauthorizedRouter = createBrowserRouter([
     {
         path:'/',
         element:  <LoginPage />,
-        errorElement: (
-            <><h1>Página não encontrada</h1></>
-        )
+        errorElement: <NotFoundPage/>
+            
     }
 ])
 
+const authoriredRouter = createBrowserRouter([
+    {
+        path:'/',
+        element:  <LoginPage />,
+        errorElement: <NotFoundPage/>
+    }
+])
+
+
 const AppRoutes = () => {
+    const isAuth = false; 
   return (
     <>
-     <RouterProvider router={router}/>
+     <RouterProvider router={isAuth? authoriredRouter : unauthorizedRouter  }/>
     </>
   );
 };
