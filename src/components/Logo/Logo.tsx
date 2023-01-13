@@ -1,8 +1,12 @@
+import { Link } from "react-router-dom";
 import LogoWhite from "../../../public/logo/dev-social-logo-white.png";
 
 const Logo = () => {
    return (
-    <img src={LogoWhite} alt="logo dev social" className="h-10 " />
+      <Link to="/">
+          <img src={LogoWhite} alt="logo dev social" className="h-10 " />
+      </Link>
+
    )
 } 
 

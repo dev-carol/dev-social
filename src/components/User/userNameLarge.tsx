@@ -6,7 +6,7 @@ type Props = {
   name: string;
   src?: string;
 };
-const UserNameLarge = ({ userName, name, src="./src/assets/img/avatarbatman.jpg",  onClick }: Props) => {
+const UserNameLarge = ({ userName, name, src="../src/assets/img/avatarbatman.jpg",  onClick }: Props) => {
   return (
     <div
     className={classNames('flex items-center justify-center gap-2', {
@@ -18,7 +18,7 @@ const UserNameLarge = ({ userName, name, src="./src/assets/img/avatarbatman.jpg"
       <img
         src={src}
         alt={userName}
-        className="w-[58px] h-[58px] rounded-[28px]"
+        className="w-[58px] h-[58px] rounded-[58px]"
       />
       <div >
       <p className="font-bold text-yellow-500">{userName}</p>

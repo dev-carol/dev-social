@@ -1,55 +1,55 @@
-import UserNameSmall from "../../components/User/userNameSmall";
-import { LikeButton } from "../../components/Button/LikeButton";
-import { useState } from "react";
+import { useState } from 'react';
+
+import { LikeButton } from '../../components/Button/LikeButton';
+import UserNameSmall from '../../components/User/userNameSmall';
+
+
 
 export type FeedCardProps = {
   userSrc: string;
   userName: string;
   feedSrc: string;
   defaultLiked?: boolean;
-  likesCount: number;
+  likesCount?: number;
   description: string;
 };
 
-const FeedCard = ({
+export function FeedCard({
   userSrc,
   userName,
   feedSrc,
-  description,
-  likesCount,
   defaultLiked = false,
-}: FeedCardProps) => {
+  likesCount,
+  description,
+}: FeedCardProps) {
   const [isLiked, setIsLiked] = useState(defaultLiked);
-
   return (
-    <div className="border border-gray-300 rounded-[4px]">
+    <div className="border border-gray-100 rounded-[4px]">
       <div className="flex flex-col items-start justify-center p-2">
-        <UserNameSmall src={userSrc} name={userName} />
+        <UserNameSmall src={userSrc} userName={userName} />
       </div>
       <div>
         <img
           src={feedSrc}
-          alt="imagem do feed"
-          className="w-full h-[400px]object-cover"
+          alt="Feed"
+          className="w-full h-[400px] object-contain"
         />
       </div>
       <div>
         <div className="p-2 w-full flex justify-start">
           <LikeButton
+
             count={likesCount}
             isLiked={isLiked}
             onClick={() => setIsLiked((prev) => !prev)}
           />
         </div>
-        <div className="pt-0 p-2 pb-2">
+        <div className="pt-0 px-2 pb-2">
           <p className="text-justify leading-5">
-            <strong>{userName}</strong>
-            {description}{" "}
+            <strong>{userName}</strong> {description}
           </p>
         </div>
       </div>
     </div>
   );
-};
-
-export default FeedCard;
+}

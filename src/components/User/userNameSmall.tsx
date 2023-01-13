@@ -5,7 +5,7 @@ type Props = {
   userName: string;
   src?: string;
 };
-const UserNameSmall = ({ userName, src="./src/assets/img/avatarbatman.jpg",  onClick }: Props) => {
+const UserNameSmall = ({ userName, src="../src/assets/img/avatarbatman.jpg",  onClick }: Props) => {
   return (
     <div
     className={classNames('flex items-center justify-center gap-2', {

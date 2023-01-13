@@ -3,10 +3,12 @@ import Logo from "../../components/Logo/Logo";
 import Navbar from "../../components/Navbar/Navbar/Navbar";
 import Button from "../../components/Button/Button";
 import UserNameSmall from "../../components/User/userNameSmall";
-import FeedCardList from "../../components/Feed/FeedCardList";
 import UserNameLarge from "../../components/User/userNameLarge";
+import { useNavigate } from "react-router-dom";
+import { FeedCardList } from "../../components/Feed/FeedCardList";
 
 const FeedPage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Navbar>
@@ -18,11 +20,11 @@ const FeedPage = () => {
               { label: "Explorar", href: "/explorar" },
             ]}
           />
-          <UserNameSmall userName="batmanoffical" onClick={() => {}} />
+          <UserNameSmall userName="batmanoffical" onClick={() => {navigate('/profile/:username')}} />
           <Button> Criar novo post</Button>
         </div>
       </Navbar>
-      <section className="w-full  max-w-5xl  py-12 m-auto grid  grid-cols-1 lg:grid-cols-[1fr,380px]">
+      <section className="w-full max-w-5xl py-12 m-auto grid grid-cols-1 lg:grid-cols-[1fr,380px]">
         <section className="w-full ">
           <FeedCardList list={new Array(5).fill({
             userName: 'Batman',
