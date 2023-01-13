@@ -1,7 +1,8 @@
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import LoginPage from "../pages/Login/LoginPage";
 import NotFoundPage from '../pages/NotFound/NotFoundPage';
+import FeedPage from '../pages/feed/feedPage';
 
 
 const unauthorizedRouter = createBrowserRouter([
@@ -16,14 +17,14 @@ const unauthorizedRouter = createBrowserRouter([
 const authoriredRouter = createBrowserRouter([
     {
         path:'/',
-        element:  <LoginPage />,
+        element:  <FeedPage />,
         errorElement: <NotFoundPage/>
     }
 ])
 
 
 const AppRoutes = () => {
-    const isAuth = false; 
+    const isAuth = true; 
   return (
     <>
      <RouterProvider router={isAuth? authoriredRouter : unauthorizedRouter  }/>
