@@ -1,11 +1,12 @@
 type Props = {
+  rows?: number;
   name: string;
   id: string;
   placeholder: string;
   label?: string;
 };
 
-const TextArea = ({ name, id, placeholder, label }: Props) => {
+const TextArea = ({ rows= 5,name, id, placeholder, label }: Props) => {
   return (
    <>
      {
@@ -13,7 +14,7 @@ const TextArea = ({ name, id, placeholder, label }: Props) => {
      }
   
     <textarea
-      rows={5}
+  rows={rows}
       name={name}
       id={id}
       placeholder={placeholder}

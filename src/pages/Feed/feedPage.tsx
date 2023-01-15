@@ -17,10 +17,10 @@ const FeedPage = () => {
         <section className="w-full ">
           <FeedCardList list={new Array(5).fill({
             userName: 'Batman',
-            userSrc: './src/assets/img/avatarbatman.jpg',
+            userSrc: '../src/assets/img/avatarbatman.jpg',
             defaultLiked:false,
             likesCount: 100,
-            feedSrc: './src/assets/img/fotofeedbatman1.png',
+            feedSrc: '../src/assets/img/fotofeedbatman1.png',
             description: "Hey,Dev. O Batman está de volta! Estou esperando o seu like para esse projeto"
           })}/>
         </section>
