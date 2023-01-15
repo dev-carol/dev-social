@@ -1,8 +1,8 @@
 import classNames from "classnames";
 
 type Props = {
-  onClick?: VoidFunction;
   userName: string;
+  onClick?: VoidFunction;
   src?: string;
 };
 const UserNameSmall = ({ userName, src="../src/assets/img/avatarbatman.jpg",  onClick }: Props) => {

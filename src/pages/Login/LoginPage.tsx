@@ -1,27 +1,19 @@
-import Button from "../../components/Button/Button";
+
 import Input from "../../components/Form/Input/Input";
 import Navbar from "../../components/Navbar/Navbar/Navbar";
-import NavbarLinks from "../../components/Navbar/NavbarLinks/NavbarLinks";
-import LogoWhite from "../../../public/logo/dev-social-logo-white.png";
+import Button from "../../components/Button/Button";
+
 
 const LoginPage = () => {
   return (
     <div>
-      <Navbar>
-        <img src={LogoWhite} alt="logo dev social" className="h-10 " />
-
-        <div className="flex items-center justify-center gap-4">
-          <NavbarLinks
-            items={[
-              { label: "Inicio", href: "/" },
-              { label: "Explorar", href: "/explorar" },
-              { label: "Entrar", href: "/entrar" },
-            ]}
-          />
-          <Button> Criar nova conta</Button>
-        </div>
-      </Navbar>
-
+     <Navbar
+        links={[
+          { label: 'Início', href: '/' },
+          { label: 'Explorar', href: '/explorar' },
+          
+        ]}
+      />
       <div
         className="w-full max-w-lg m-auto flex flex-col  h-[calc(100vh-80px)] 
       items-center justify-center gap-4"
@@ -42,7 +34,7 @@ const LoginPage = () => {
           Novo na plataforma?
           <a
             className=" text-brandPrimary/500 font-bold ml-2"
-            href="/cadastrar"
+            href="/create/account"
           >
             Criar minha conta
           </a>
