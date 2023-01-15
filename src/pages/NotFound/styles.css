@@ -11,7 +11,7 @@
 }
 
 .img-batman{
-  background-image: url(https://i.pinimg.com/originals/2f/0d/df/2f0ddf63c8157f572f7a9761aa253f0d.gif);
+  background-image: url('https://i.pinimg.com/originals/2f/0d/df/2f0ddf63c8157f572f7a9761aa253f0d.gif');
   height:500px;
   width: 50rem;
   background-repeat: no-repeat;
